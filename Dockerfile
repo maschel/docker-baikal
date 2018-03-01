@@ -23,7 +23,7 @@ RUN apk --no-cache add unzip openssl lighttpd php7-cgi@php php7-ctype@php php7-d
     && unzip baikal*.zip \
     && rm baikal*.zip \
     && chmod +x /usr/local/bin/baikal \
-    && sed -ie "s/;cgi.fix_pathinfo=1/cgi.fix_pathinfo=0/g" /etc/php5/php.ini \
+    && sed -ie "s/;cgi.fix_pathinfo=1/cgi.fix_pathinfo=0/g" /etc/php7/php.ini \
     && mkdir /baikal/html/.well-known \
     && apk del -rf --purge openssl unzip
 
